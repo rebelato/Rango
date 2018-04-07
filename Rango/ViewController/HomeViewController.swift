@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,18 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func btPerfil(_ sender: UIButton) {
+        print(1)
+    }
+    
+    @IBAction func btFicha(_ sender: UIButton) {
+        print(1)
+    }
+    
+    @IBAction func btHome(_ sender: UIButton) {
+        print(1)
+    }
     
 }
 

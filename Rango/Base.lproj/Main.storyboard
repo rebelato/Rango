@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Rango" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,6 +53,9 @@
                                         <integer key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kdb-Ek-yf6"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gqN-Eg-oyW">
                                 <rect key="frame" x="16" y="334" width="336" height="30"/>
@@ -61,6 +64,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="336" id="sQd-u9-7dE"/>
                                 </constraints>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -83,6 +87,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="O46-cL-6oE"/>
                     <connections>
+                        <outlet property="emailText" destination="gqN-Eg-oyW" id="ZJn-Af-Ijj"/>
+                        <outlet property="senhaText" destination="koB-lJ-FPn" id="wTa-Mt-A2B"/>
                         <segue destination="hko-57-qpn" kind="show" id="a8F-KZ-mTT"/>
                         <segue destination="UNd-NL-2wJ" kind="show" id="5vb-5P-a7n"/>
                     </connections>
@@ -155,6 +161,9 @@
                                         <integer key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cadastrarCliente:" destination="UNd-NL-2wJ" eventType="touchUpInside" id="6SL-BS-xN8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -177,6 +186,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nx1-Gi-ZkL"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextCadastro" destination="AeT-7x-lxa" id="VeR-0O-Cso"/>
+                        <outlet property="nomeTextCadastro" destination="dKm-1D-VxU" id="cZx-UW-PXd"/>
+                        <outlet property="senhaTextCadastro" destination="pfG-ea-vof" id="uct-8u-QVO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ndc-bz-YyN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,53 +214,48 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86G-wD-EaD">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86G-wD-EaD">
                                 <rect key="frame" x="16" y="598" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bpf-az-frr"/>
                                     <constraint firstAttribute="width" constant="46" id="udl-gK-3vy"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btHome:" destination="hko-57-qpn" eventType="touchUpInside" id="4oL-IO-Gbx"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7q-FM-QnS">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7q-FM-QnS">
                                 <rect key="frame" x="164" y="598" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bfQ-Gk-YQ1"/>
                                     <constraint firstAttribute="width" constant="46" id="vQR-Hc-yzp"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btFicha:" destination="hko-57-qpn" eventType="touchUpInside" id="qXp-He-cmI"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-aq-rAZ">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-aq-rAZ">
                                 <rect key="frame" x="313" y="598" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2Mh-1W-zVf"/>
                                     <constraint firstAttribute="width" constant="46" id="Yuj-Er-9vp"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btPerfil:" destination="hko-57-qpn" eventType="touchUpInside" id="8CI-Cw-Tdd"/>
+                                </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0fH-OW-dzT">
-                                <rect key="frame" x="0.0" y="140" width="375" height="426"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="0ff-Fz-Rel"/>
-                                    <constraint firstAttribute="height" constant="426" id="kW0-Kf-ccF"/>
-                                </constraints>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="3Zc-aq-rAZ" firstAttribute="top" secondItem="0fH-OW-dzT" secondAttribute="bottom" constant="32" id="ILR-WO-MHf"/>
-                            <constraint firstItem="z7q-FM-QnS" firstAttribute="top" secondItem="0fH-OW-dzT" secondAttribute="bottom" constant="32" id="Mae-St-mXr"/>
                             <constraint firstItem="tx9-QN-GkV" firstAttribute="trailing" secondItem="cEE-CN-IUq" secondAttribute="trailing" constant="117" id="N8c-GM-pPp"/>
                             <constraint firstItem="z7q-FM-QnS" firstAttribute="leading" secondItem="86G-wD-EaD" secondAttribute="trailing" constant="102" id="OgK-VW-e5g"/>
-                            <constraint firstItem="0fH-OW-dzT" firstAttribute="top" secondItem="cEE-CN-IUq" secondAttribute="bottom" constant="8" id="THa-mp-3yK"/>
-                            <constraint firstItem="86G-wD-EaD" firstAttribute="top" secondItem="0fH-OW-dzT" secondAttribute="bottom" constant="32" id="TvB-4Q-gpR"/>
                             <constraint firstItem="cEE-CN-IUq" firstAttribute="top" secondItem="tx9-QN-GkV" secondAttribute="top" constant="38" id="W0t-Or-pfU"/>
-                            <constraint firstItem="0fH-OW-dzT" firstAttribute="trailing" secondItem="tx9-QN-GkV" secondAttribute="trailing" id="YBt-Qx-LW9"/>
                             <constraint firstItem="3Zc-aq-rAZ" firstAttribute="leading" secondItem="z7q-FM-QnS" secondAttribute="trailing" constant="103" id="aqf-Nb-mhW"/>
                             <constraint firstItem="86G-wD-EaD" firstAttribute="leading" secondItem="tx9-QN-GkV" secondAttribute="leading" constant="16" id="gCf-wc-HIL"/>
                             <constraint firstItem="cEE-CN-IUq" firstAttribute="leading" secondItem="tx9-QN-GkV" secondAttribute="leading" constant="116" id="hUP-R7-ERc"/>
-                            <constraint firstItem="0fH-OW-dzT" firstAttribute="leading" secondItem="tx9-QN-GkV" secondAttribute="leading" id="oV5-yj-AYD"/>
                             <constraint firstItem="tx9-QN-GkV" firstAttribute="trailing" secondItem="3Zc-aq-rAZ" secondAttribute="trailing" constant="16" id="pSV-NO-GwO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tx9-QN-GkV"/>
@@ -264,7 +273,7 @@
         <!--Perfil View Controller-->
         <scene sceneID="BsK-Dh-4It">
             <objects>
-                <viewController id="Eph-ei-4yk" customClass="PerfilViewController" sceneMemberID="viewController">
+                <viewController id="Eph-ei-4yk" customClass="PerfilViewController" customModule="Rango" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vu1-WO-c3Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -315,7 +324,7 @@
         <!--Qr View Controller-->
         <scene sceneID="Kbw-t9-hsH">
             <objects>
-                <viewController id="fDw-Lm-OJq" customClass="QrViewController" sceneMemberID="viewController">
+                <viewController id="fDw-Lm-OJq" customClass="QrViewController" customModule="Rango" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rke-0q-yuu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -348,7 +357,7 @@
         <!--Prato View Controller-->
         <scene sceneID="eJw-fP-JOJ">
             <objects>
-                <viewController id="MWm-Xe-ZgU" customClass="DPratoViewController" sceneMemberID="viewController">
+                <viewController id="MWm-Xe-ZgU" customClass="PratoViewController" customModule="Rango" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FH7-z4-bmT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

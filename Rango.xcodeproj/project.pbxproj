@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A04E6E00207968BD004F1F4F /* Banana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A04E6DFF207968BD004F1F4F /* Banana.jpg */; };
 		A077FB56207920040081EA1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A077FB55207920040081EA1E /* AppDelegate.swift */; };
 		A077FB58207920040081EA1E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A077FB57207920040081EA1E /* LoginViewController.swift */; };
 		A077FB5B207920040081EA1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A077FB59207920040081EA1E /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A04E6DFF207968BD004F1F4F /* Banana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Banana.jpg; path = "../../../Downloads/fruit-images/Banana.jpg"; sourceTree = "<group>"; };
 		A077FB52207920040081EA1E /* Rango.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rango.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A077FB55207920040081EA1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A077FB57207920040081EA1E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				A077FB55207920040081EA1E /* AppDelegate.swift */,
 				A077FB59207920040081EA1E /* Main.storyboard */,
 				A077FB5C207920050081EA1E /* Assets.xcassets */,
+				A04E6DFF207968BD004F1F4F /* Banana.jpg */,
 				A077FB5E207920050081EA1E /* LaunchScreen.storyboard */,
 				A077FB61207920050081EA1E /* Info.plist */,
 			);
@@ -156,6 +159,7 @@
 			files = (
 				A077FB60207920050081EA1E /* LaunchScreen.storyboard in Resources */,
 				A077FB5D207920050081EA1E /* Assets.xcassets in Resources */,
+				A04E6E00207968BD004F1F4F /* Banana.jpg in Resources */,
 				A077FB5B207920040081EA1E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
